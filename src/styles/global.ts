@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   html {
     // font-size: 16px (desktop) por isso essas alterações com % fazem mt sentido para aplicação usando rem pois ele é uma medida de equivalência ao tamanho da fonte, usando porcentagem ajuda na acessibilidade.
     @media (max-width: 1080px) {
@@ -34,10 +34,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ---background;
+    background: var(--background);
     --webkit-font-smoothing: antialiased;
   }
-  
+
   button {
     cursor: pointer;
   }
@@ -55,4 +55,28 @@ export const GlobalStyle = createGlobalStyle`
     opacity: 0.6;
     cursor: not-allowed;
   }
+
+  .react-modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .react-modal-content {
+    width: 100%auto;
+    max-width: 576px;
+    background: var(--background);
+    padding: 3rem;
+    position: relative;
+    border-radius: 0.24rem;
+  }
+
 `;
